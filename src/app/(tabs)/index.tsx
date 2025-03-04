@@ -1,16 +1,5 @@
-import { View, FlatList } from 'react-native';
-import products from '@assets/data/products';
-import { ProductListItem } from '@components/ProductListItem';
+import { Redirect } from 'expo-router';
 
-export default function MenuScreen() {
-  return (
-    <View>
-      {/* <ProductListItem product={products[1]} />
-      <ProductListItem product={products[2]} /> */}
-      <FlatList
-        data={products}
-        renderItem={({ item }) => <ProductListItem product={item} />}
-      />
-    </View>
-  );
+export default function TabIndex() {
+  return <Redirect href={'/menu/'} />;
 }
